@@ -14,12 +14,11 @@ Resources:
   MyS3Bucket:
     Type: 'AWS::S3::Bucket'
     Properties:
-      BucketName: !Sub '${AWS::StackName}-${Environment}-bucketss'
+      BucketName: !Sub '${AWS::StackName}-${Environment}-bucket'
       Tags:
         - Key: Environment
           Value: !Ref Environment
-        - Key: Environment
-          Value: MacGitHubActionsTesting
+        
 
 
   Outputs:
